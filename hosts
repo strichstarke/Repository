@@ -1,0 +1,12 @@
+[front]
+haproxy ansible_host=35.183.209.192 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/ansible/BOB.pem
+
+[web1]
+nginx1 ansible_host=3.96.192.127 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/ansible/BOB.pem
+
+[web2]
+nginx2 ansible_host=52.60.76.177 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/ansible/BOB.pem
+
+[web:children]
+web1
+web2
